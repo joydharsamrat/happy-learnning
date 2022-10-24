@@ -6,7 +6,7 @@ import { userContext } from '../../context/AuthProvider/AuthProvider';
 const Header = () => {
     const { user } = useContext(userContext);
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 w-10/12 mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -31,18 +31,12 @@ const Header = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
-                    <li><a>Item 1</a></li>
-                    <li tabIndex={0}>
-                        <a>
-                            Parent
-                            <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-                        </a>
-                        <ul className="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                        </ul>
-                    </li>
-                    <li><a>Item 3</a></li>
+                    <li><NavLink to='/' className='bg-inherit text-black'>Home</NavLink></li>
+                    <li><NavLink to='/courses' className='bg-inherit text-black'>Courses</NavLink></li>
+                    <li><NavLink to='/faq' className='bg-inherit text-black'>FAQ</NavLink></li>
+                    <li><NavLink to='/blogs' className='bg-inherit text-black'>Blogs</NavLink></li>
+                    <li><NavLink to='/about' className='bg-inherit text-black'>About</NavLink></li>
+
                 </ul>
             </div>
             <div className="navbar-end">
@@ -50,7 +44,7 @@ const Header = () => {
                     user?.uid ?
                         <img src="" alt="" />
                         :
-                        <Link to='/login' className="btn">Login</Link>
+                        <Link to='/login' className="btn btn-outline">Login</Link>
                 }
             </div>
         </div>

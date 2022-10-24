@@ -4,6 +4,8 @@ import About from "../../Pages/About/About";
 import Blogs from "../../Pages/Blogs/Blogs";
 import CourseSubjects from "../../Pages/Courses/CourseSubjects/CourseSubjects";
 import CourseSubjectsDetails from "../../Pages/Courses/CourseSubjectsDetails/CourseSubjectsDetails";
+import Error from "../../Pages/Error/Error";
+import Faq from "../../Pages/Faq/Faq";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
 import Register from "../../Pages/Register/Register";
@@ -40,7 +42,15 @@ export const router = createBrowserRouter([
             {
                 path: '/courseDetails/:id',
                 element: <CourseSubjectsDetails></CourseSubjectsDetails>
+            },
+            {
+                path: 'faq',
+                element: <Faq></Faq>
             }
         ]
+    },
+    {
+        path: '*',
+        element: <Error></Error>
     }
 ])
