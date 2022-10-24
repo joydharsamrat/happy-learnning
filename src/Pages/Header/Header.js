@@ -4,7 +4,13 @@ import { Link, NavLink } from 'react-router-dom';
 import { authContext } from '../../context/AuthProvider/AuthProvider';
 
 const Header = () => {
-    const { user } = useContext(authContext);
+    const { user, logOut } = useContext(authContext);
+
+    const handelLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
     return (
         <div className="navbar bg-base-100 w-10/12 mx-auto">
             <div className="navbar-start">
@@ -38,7 +44,7 @@ const Header = () => {
                     user?.uid ?
                         <>
                             <img title={user.displayName} className='cursor-pointer rounded-full w-10' src={user.photoURL} alt="" />
-                            <button className="btn btn-outline ml-5">Logout</button>
+                            <button onClick={handelLogOut} className="btn btn-outline ml-5">Logout</button>
                         </>
 
                         :
