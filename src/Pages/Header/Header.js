@@ -1,10 +1,10 @@
 import React from 'react';
 import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { userContext } from '../../context/AuthProvider/AuthProvider';
+import { authContext } from '../../context/AuthProvider/AuthProvider';
 
 const Header = () => {
-    const { user } = useContext(userContext);
+    const { user } = useContext(authContext);
     return (
         <div className="navbar bg-base-100 w-10/12 mx-auto">
             <div className="navbar-start">
@@ -13,18 +13,12 @@ const Header = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Item 1</a></li>
-                        <li tabIndex={0}>
-                            <a className="justify-between">
-                                Parent
-                                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-                            </a>
-                            <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        <li><NavLink to='/' className='bg-inherit text-black'>Home</NavLink></li>
+                        <li><NavLink to='/courses' className='bg-inherit text-black'>Courses</NavLink></li>
+                        <li><NavLink to='/faq' className='bg-inherit text-black'>FAQ</NavLink></li>
+                        <li><NavLink to='/blogs' className='bg-inherit text-black'>Blogs</NavLink></li>
+                        <li><NavLink to='/about' className='bg-inherit text-black'>About</NavLink></li>
+
                     </ul>
                 </div>
                 <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
@@ -42,7 +36,11 @@ const Header = () => {
             <div className="navbar-end">
                 {
                     user?.uid ?
-                        <img src="" alt="" />
+                        <>
+                            <img title={user.displayName} className='cursor-pointer rounded-full w-10' src={user.photoURL} alt="" />
+                            <button className="btn btn-outline ml-5">Logout</button>
+                        </>
+
                         :
                         <Link to='/login' className="btn btn-outline">Login</Link>
                 }
