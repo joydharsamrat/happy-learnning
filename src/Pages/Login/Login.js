@@ -5,7 +5,7 @@ import { authContext } from '../../context/AuthProvider/AuthProvider';
 
 const Login = () => {
     const [error, setError] = useState(null);
-    const { logInWithGoogle, logInWithGithub } = useContext(authContext)
+    const { logInWithGoogle, logInWithGithub, logIn } = useContext(authContext)
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
     const handelSignInWithGoogle = () => {
@@ -23,11 +23,22 @@ const Login = () => {
                 setError(null)
                 console.log(result.user)
             })
-            .catch(error => console.error(error))
+            .catch(error => setError(error.message))
     }
 
     const handelSubmit = (event) => {
         event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        logIn(email, password)
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                setError(error.message)
+                console.error(error)
+            })
     }
 
 
@@ -36,20 +47,18 @@ const Login = () => {
             <div className="hero-content lg:mr-60 ">
                 <div className="flex-shrink-0 w-full  shadow-2xl">
                     <p className="text-white text-5xl mb-5 font-semibold">Login Now</p>
-                    <form>
-
-
+                    <form onSubmit={handelSubmit}>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text text-white">Email</span>
                             </label>
-                            <input type="email" placeholder="email" className="input input-bordered" required />
+                            <input type="email" name='email' placeholder="email" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text text-white">Password</span>
                             </label>
-                            <input type="password" placeholder="password" className="input input-bordered" required />
+                            <input type="password" name='password' placeholder="password" className="input input-bordered" required />
 
                         </div>
 

@@ -1,4 +1,4 @@
-import { GithubAuthProvider, GoogleAuthProvider, createUser } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
@@ -18,7 +18,7 @@ const Register = () => {
                 setError(null)
                 console.log(result.user)
             })
-            .catch(error => setError(error.errorMessage))
+            .catch(error => setError(error.message))
     }
 
     const handelSignInWithGithub = () => {
@@ -27,7 +27,7 @@ const Register = () => {
                 setError(null)
                 console.log(result.user)
             })
-            .catch(error => setError(error.errorMessage))
+            .catch(error => setError(error.message))
     }
 
 
@@ -44,8 +44,9 @@ const Register = () => {
                 console.log(result.user)
                 handelUserProfileUpdate(name, photoURL)
                 form.reset();
+
             })
-            .catch(error => setError(error.errorMessage))
+            .catch(error => setError(error.message))
 
 
     }
@@ -59,7 +60,7 @@ const Register = () => {
             .then(result => {
                 console.log(result.user)
             })
-            .catch(error => setError(error.errorMessage))
+            .catch(error => setError(error.message))
     }
 
 
