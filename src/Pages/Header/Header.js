@@ -12,7 +12,7 @@ const Header = () => {
             .catch(error => console.error(error))
     }
     return (
-        <div className="navbar bg-base-100 w-10/12 mx-auto">
+        <div className="navbar bg-base-100 lg:px-20 shadow">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -48,7 +48,11 @@ const Header = () => {
                         </>
 
                         :
-                        <Link to='/login' className="btn btn-outline">Login</Link>
+                        <>
+                            <Link to='/login' className="btn btn-outline">Login</Link>
+                            <Link to='/register' className="btn btn-outline ml-3">Register</Link>
+
+                        </>
                 }
             </div>
         </div>
