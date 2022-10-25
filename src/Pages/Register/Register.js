@@ -8,7 +8,7 @@ import './register.css';
 
 const Register = () => {
     const [error, setError] = useState(null);
-    const { logInWithGoogle, logInWithGithub } = useContext(authContext)
+    const { logInWithGoogle, logInWithGithub, createUser } = useContext(authContext)
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
 
@@ -41,10 +41,12 @@ const Register = () => {
 
         createUser(email, password)
             .then(result => {
-                console.log()
+                console.log(result.user)
+                form.reset();
             })
+            .catch(error => console.error(error))
 
-        form.reset();
+
     }
 
     return (
