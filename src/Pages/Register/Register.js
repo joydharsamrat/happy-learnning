@@ -8,7 +8,7 @@ import './register.css';
 
 const Register = () => {
     const [error, setError] = useState(null);
-    const { logInWithGoogle, logInWithGithub, createUser } = useContext(authContext)
+    const { logInWithGoogle, logInWithGithub, createUser, updateUserInfo } = useContext(authContext)
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
 
@@ -18,7 +18,7 @@ const Register = () => {
                 setError(null)
                 console.log(result.user)
             })
-            .catch(error => setError(error.message))
+            .catch(error => setError(error.errorMessage))
     }
 
     const handelSignInWithGithub = () => {
@@ -27,7 +27,7 @@ const Register = () => {
                 setError(null)
                 console.log(result.user)
             })
-            .catch(error => console.error(error))
+            .catch(error => setError(error.errorMessage))
     }
 
 
@@ -42,12 +42,26 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 console.log(result.user)
+                handelUserProfileUpdate(name, photoURL)
                 form.reset();
             })
-            .catch(error => console.error(error))
+            .catch(error => setError(error.errorMessage))
 
 
     }
+
+    const handelUserProfileUpdate = (name, photoURL) => {
+        const profile = {
+            displayName: name,
+            photoURL: photoURL
+        }
+        updateUserInfo(profile)
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => setError(error.errorMessage))
+    }
+
 
     return (
         <div className="hero min-h-screen lg:justify-end register ">
