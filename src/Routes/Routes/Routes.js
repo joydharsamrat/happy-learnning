@@ -2,7 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
 import About from "../../Pages/About/About";
 import Blogs from "../../Pages/Blogs/Blogs";
-import CourseSubjects from "../../Pages/Courses/CourseSubjects/CourseSubjects";
+import CourseCategories from "../../Pages/Courses/CourseCategories/CourseCategories";
+import Courses from "../../Pages/Courses/Courses/Courses";
 import CourseSubjectsDetails from "../../Pages/Courses/CourseSubjectsDetails/CourseSubjectsDetails";
 import Error from "../../Pages/Error/Error";
 import Faq from "../../Pages/Faq/Faq";
@@ -37,11 +38,24 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/courses',
-                element: <CourseSubjects></CourseSubjects>
-            },
-            {
-                path: '/courseDetails/:id',
-                element: <CourseSubjectsDetails></CourseSubjectsDetails>
+                loader: () => fetch('http://localhost:5000/categories'),
+                element: <Courses></Courses>,
+
+                children: [
+                    {
+                        path: '/courses',
+                        loader: () => fetch('http://localhost:5000/categories'),
+                        element: <CourseCategories></CourseCategories>
+                    },
+
+                    {
+                        path: '/courses/courseDetails/:id',
+                        loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`),
+                        element: <CourseSubjectsDetails></CourseSubjectsDetails>
+                    }
+
+                ]
+
             },
             {
                 path: 'faq',
