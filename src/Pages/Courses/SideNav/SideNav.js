@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const SideNav = ({ category }) => {
     return (
         <div >
-            <Link to={`/courses/courseDetails/${category.id}`} className='text-xl text-blue-500'>{category.name}</Link>
+            <NavLink to={`/courses/courseDetails/${category.id}`} className={({ isActive }) => isActive ? 'btn w-full mt-5 text-xl text-white bg-blue-600 border-none' : 'btn w-full mt-5 text-xl text-white border-none'}>{category.name}</NavLink>
         </div>
     );
 };
