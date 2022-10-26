@@ -2,7 +2,7 @@ import React from 'react';
 
 const Faq = () => {
     return (
-        <div className='flex justify-around h-screen'>
+        <div className='lg:grid grid-cols-2 justify-around '>
             <div className='h-4/6 my-auto'>
                 <img className='w-full h-full' src="https://img.freepik.com/free-vector/thoughtful-woman-with-laptop-looking-big-question-mark_1150-39362.jpg?w=740&t=st=1666745124~exp=1666745724~hmac=cb06fd4cd22e39401994019d38945d27f0e002c33d1b11623dd0d387614c9a61" alt="" />
             </div>

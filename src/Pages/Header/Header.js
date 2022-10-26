@@ -68,8 +68,8 @@ const Header = () => {
 
                         :
                         <>
-                            <Link to='/login' className="btn btn-outline">Login</Link>
-                            <Link to='/register' className="btn btn-outline ml-3">Register</Link>
+                            <Link to='/login' className="btn btn-sm lg:btn-md btn-outline">Login</Link>
+                            <Link to='/register' className="btn btn-sm lg:btn-md btn-outline ml-3">Register</Link>
 
                         </>
                 }

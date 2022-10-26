@@ -1,3 +1,28 @@
+# Happy Learning.
+Happy learning is a website for online course of different programming languages.
+
+# live website : 
+
+# Features :
+
+<ul>
+<li>User Friendly.</li>
+<li>Mobile And Desktop Responsive.</li>
+<li>Download Or print option for course details.</li>
+<li>Easy to find questions answer from faq section</li>
+<li>Light and Dark Themes</li>
+</ul>
+
+# Used technologies
+<ul>
+<li>React</li>
+<li>Tailwind Css</li>
+<li>Daisy ui (tailwind component library)</li>
+<li>React Router</li>
+<li>Firebase</li>
+</ul>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

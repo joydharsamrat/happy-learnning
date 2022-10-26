@@ -5,8 +5,8 @@ const Blogs = () => {
         <div>
             <h1 className='text-center text-5xl font-bold my-5'>Blogs</h1>
             <hr />
-            <div className='m-5 grid grid-cols-2 gap-10'>
-                <div className=' bg-teal-200 p-7 rounded'>
+            <div className='m-5 lg:grid grid-cols-2 gap-10'>
+                <div className='mb-2 lg:mb-0 bg-teal-200 p-7 rounded'>
                     <h3 className='text-4xl font-semibold text-center'>what is cors?</h3>
                     <hr />
                     <p className='text-lg'>
@@ -14,7 +14,7 @@ const Blogs = () => {
 
                     </p>
                 </div>
-                <div className=' bg-cyan-200 p-7 rounded'>
+                <div className='mb-2 lg:mb-0 bg-cyan-200 p-7 rounded'>
                     <div className='mb-3'>
                         <h3 className='text-4xl font-semibold text-center'>Why are you using firebase?</h3>
                         <hr />
@@ -42,7 +42,7 @@ const Blogs = () => {
                         </p>
                     </div>
                 </div>
-                <div className=' bg-violet-200 p-7 rounded'>
+                <div className='mb-2 lg:mb-0 bg-violet-200 p-7 rounded'>
                     <h3 className='text-4xl font-semibold text-center'>How does the private route work?</h3>
                     <hr />
                     <p className='text-lg'>
@@ -50,7 +50,7 @@ const Blogs = () => {
 
                     </p>
                 </div>
-                <div className=' bg-rose-200 p-7 rounded'>
+                <div className=' mb-2 lg:mb-0 bg-rose-200 p-7 rounded'>
                     <div className='mb-3'>
                         <h3 className='text-4xl font-semibold text-center'>what is Node ?</h3>
                         <hr />
