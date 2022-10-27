@@ -2,15 +2,16 @@ import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { authContext } from '../../context/AuthProvider/AuthProvider';
 import './register.css';
 
 const Register = () => {
     const [error, setError] = useState(null);
-    const { logInWithGoogle, logInWithGithub, createUser, updateUserInfo } = useContext(authContext)
+    const { logInWithGoogle, logInWithGithub, createUser, updateUserInfo, setLoading } = useContext(authContext)
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
+    const navigate = useNavigate();
 
     const handelSignInWithGoogle = () => {
         logInWithGoogle(googleProvider)
@@ -43,14 +44,12 @@ const Register = () => {
             .then(result => {
                 handelUserProfileUpdate(name, photoURL)
                 form.reset();
-
+                navigate('/home')
             })
             .catch(error => {
                 console.error(error)
                 setError(error.message)
             })
-
-
     }
 
     const handelUserProfileUpdate = (name, photoURL) => {
@@ -62,7 +61,13 @@ const Register = () => {
             .then(result => {
                 console.log(result.user)
             })
-            .catch(error => setError(error.message))
+            .catch(error => {
+                console.error(error)
+                setError(error.message)
+            })
+            .finally(() => {
+                setLoading(false)
+            })
     }
 
 
