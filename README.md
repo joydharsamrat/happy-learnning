@@ -20,6 +20,7 @@ Happy learning is a website for online course of different programming languages
 <li>Daisy ui (tailwind component library)</li>
 <li>React Router</li>
 <li>Firebase</li>
+<li>Framer Motion</li>
 </ul>
 
 

@@ -5,7 +5,7 @@ import { authContext } from '../../context/AuthProvider/AuthProvider';
 
 const Login = () => {
     const [error, setError] = useState(null);
-    const { logInWithGoogle, logInWithGithub, logIn } = useContext(authContext);
+    const { logInWithGoogle, logInWithGithub, logIn, setLoading } = useContext(authContext);
 
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
@@ -45,6 +45,9 @@ const Login = () => {
             .catch(error => {
                 setError(error.message)
                 console.error(error)
+            })
+            .finally(() => {
+                setLoading(false)
             })
     }
 

@@ -41,12 +41,14 @@ const Register = () => {
 
         createUser(email, password)
             .then(result => {
-                console.log(result.user)
                 handelUserProfileUpdate(name, photoURL)
                 form.reset();
 
             })
-            .catch(error => setError(error.message))
+            .catch(error => {
+                console.error(error)
+                setError(error.message)
+            })
 
 
     }

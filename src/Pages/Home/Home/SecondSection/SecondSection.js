@@ -2,7 +2,7 @@ import React from 'react';
 
 const SecondSection = () => {
     return (
-        <div className='my-10'>
+        <div className='my-20'>
             <h1 className='text-center section-title text-3xl border bg-slate-500 rounded text-white border-gray-900 p-2 w-96 mx-auto'>Why Happy Learning ?</h1>
             <div className='mt-5'>
                 <div className="carousel h-full lg:w-5/6 mx-auto">

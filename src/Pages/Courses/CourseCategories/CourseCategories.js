@@ -8,7 +8,7 @@ const CourseCategories = () => {
             {
                 categories.map(category => {
                     return (
-                        <div className="card pb-20 relative bg-slate-200">
+                        <div className="card pb-20 relative bg-teal-100">
                             <figure><img src={category.img} alt="Shoes" /></figure>
                             <div className="card-body p-2">
                                 <h2 className="text-2xl font-bold">{category.name}</h2>
