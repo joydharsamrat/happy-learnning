@@ -1,0 +1,6 @@
+.third {
+    background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url(/public/assets/typing.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}

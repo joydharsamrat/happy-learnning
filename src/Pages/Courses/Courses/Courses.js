@@ -7,7 +7,7 @@ const Courses = () => {
     const categories = useLoaderData();
     return (
         <div className='courses-container'>
-            <div className='border text-center'>
+            <div className='text-center h-fit'>
                 <h2 className='text-3xl font-bold underline'>Courses</h2>
                 {
                     categories.map(category => <SideNav key={category.id} category={category}></SideNav>)

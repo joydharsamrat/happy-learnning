@@ -63,7 +63,6 @@ const Register = () => {
             })
             .catch(error => {
                 console.error(error)
-                setError(error.message)
             })
             .finally(() => {
                 setLoading(false)

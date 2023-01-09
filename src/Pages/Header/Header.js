@@ -3,11 +3,9 @@ import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { authContext } from '../../context/AuthProvider/AuthProvider';
 import { FaUserAlt } from "react-icons/fa";
-import { useState } from 'react';
 
 const Header = () => {
     const { user, logOut } = useContext(authContext);
-    const [isDark, setIsDark] = useState(false);
 
     const handelLogOut = () => {
         logOut()
@@ -15,9 +13,6 @@ const Header = () => {
             .catch(error => console.error(error))
     }
 
-    const handelThemeToggle = () => {
-        setIsDark(!isDark);
-    }
 
     return (
         <div className="navbar bg-base-100 lg:px-20 shadow">
@@ -35,20 +30,15 @@ const Header = () => {
 
                     </ul>
                 </div>
-                <Link to='/'><img className='w-50 h-15 rounded' src="logo.png" alt="" /></Link>
-                <div className='ml-3'>
-                    {
-                        isDark ? <button className='btn btn-xs' onClick={handelThemeToggle}>Dark</button> : <button className='btn btn-xs bg-white text-black' onClick={handelThemeToggle}>Light</button>
-                    }
-                </div>
+                <Link className='font-bold text-3xl flex items-center gap-2' to='/'><img className='w-8 lg:w-14 rounded' src="favicon.png" alt="" /> <p className='hidden lg:block'><span className='text-[#2a9d8f]'>Happy</span>Learning</p></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
-                    <li><NavLink to='/home' className={({ isActive }) => isActive ? 'text-blue-500 bg-inherit' : 'bg-inherit text-black'} >Home</NavLink></li>
-                    <li><NavLink to='/courses' className={({ isActive }) => isActive ? 'text-blue-500 bg-inherit' : 'bg-inherit text-black'}>Courses</NavLink></li>
-                    <li><NavLink to='/faq' className={({ isActive }) => isActive ? 'text-blue-500 bg-inherit' : 'bg-inherit text-black'}>FAQ</NavLink></li>
-                    <li><NavLink to='/blogs' className={({ isActive }) => isActive ? 'text-blue-500 bg-inherit' : 'bg-inherit text-black'}>Blogs</NavLink></li>
-                    <li><NavLink to='/about' className={({ isActive }) => isActive ? 'text-blue-500 bg-inherit' : 'bg-inherit text-black'}>About</NavLink></li>
+                    <li><NavLink to='/home' className={({ isActive }) => isActive ? 'text-blue-500 bg-inherit font-bold' : 'bg-inherit text-black'} >Home</NavLink></li>
+                    <li><NavLink to='/courses' className={({ isActive }) => isActive ? 'text-blue-500 bg-inherit font-bold' : 'bg-inherit text-black'}>Courses</NavLink></li>
+                    <li><NavLink to='/faq' className={({ isActive }) => isActive ? 'text-blue-500 bg-inherit font-bold' : 'bg-inherit text-black'}>FAQ</NavLink></li>
+                    <li><NavLink to='/blogs' className={({ isActive }) => isActive ? 'text-blue-500 bg-inherit font-bold' : 'bg-inherit text-black'}>Blogs</NavLink></li>
+                    <li><NavLink to='/about' className={({ isActive }) => isActive ? 'text-blue-500 bg-inherit font-bold' : 'bg-inherit text-black'}>About</NavLink></li>
 
                 </ul>
             </div>
@@ -68,8 +58,8 @@ const Header = () => {
 
                         :
                         <>
-                            <Link to='/login' className="btn btn-sm lg:btn-md btn-outline">Login</Link>
-                            <Link to='/register' className="btn btn-sm lg:btn-md btn-outline ml-3">Register</Link>
+                            <Link to='/login' className="btn btn-sm lg:btn-md btn-outline hover:bg-[#2a9d8f] hover:text-white hover:border-0">Login</Link>
+                            <Link to='/register' className="btn btn-sm lg:btn-md btn-outline hover:bg-[#2a9d8f] hover:text-white hover:border-0 ml-3">Register</Link>
 
                         </>
                 }

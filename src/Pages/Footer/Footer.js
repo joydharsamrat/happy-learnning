@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className="footer p-10 bg-gray-700 text-white">
 
             <div>
-                <div> <img className='bg-white rounded-sm' src="logo.png" alt="" /></div>
+                <div> <img className='h-20 w-20' src="favicon.png" alt="" /></div>
                 <p>Happy Learning</p>
                 <p className='flex items-center gap-2'>Copyright <FaRegCopyright></FaRegCopyright></p>
                 <p> 2022 - All right reserved</p>

@@ -43,7 +43,7 @@ const Login = () => {
                 navigate(from, { replace: true })
             })
             .catch(error => {
-                setError(error.message)
+                setError(error.message.split('/')[1].split(')')[0])
                 console.error(error)
             })
             .finally(() => {
