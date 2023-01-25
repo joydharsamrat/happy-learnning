@@ -7,14 +7,13 @@ const SecondSection = () => {
             <div className='bg-[#2a9d8f] pt-20 pb-40'>
                 <h1 className='text-center section-title text-3xl text-white font-bold p-2'>Why Happy Learning ?</h1>
             </div>
-            <div data-aos="fade-up" data-aos-duration='1500' className='flex flex-col lg:flex-row items-stretch justify-center gap-10 text-center mb-20 lg:-mt-32'>
+            <div className='flex flex-col lg:flex-row items-stretch justify-center gap-10 text-center mb-20 lg:-mt-32'>
                 <motion.div
                     whileHover={{
                         y: -10,
                         scale: 1.05,
                         transition: { duration: .2 }
                     }}
-
                     className='w-screen lg:w-[250px] shadow-xl rounded-b-xl'>
                     <div>
                         <img className=' rounded-t-lg' src="/assets/education.jpg" alt="" />

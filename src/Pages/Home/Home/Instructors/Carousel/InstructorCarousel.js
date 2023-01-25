@@ -22,11 +22,11 @@ const InstructorCarousel = () => {
                 <motion.div drag="x" dragConstraints={{ right: 0, left: -width }} className='inner-carousel flex gap-14 px-5'>
 
                     <motion.div className='item'>
-                        <div className="card w-96 border-4 border-[#2a9d8f] text-white shadow-xl relative">
+                        <div className="card w-96 border-4 rounded-full border-[#2a9d8f] text-white  relative">
                             <figure className="px-10 py-10">
-                                <img src={img1} alt="Shoes" className="rounded-xl pointer-events-none" />
+                                <img src={img1} alt="Shoes" className="rounded-full pointer-events-none " />
                             </figure>
-                            <div className="flex flex-col items-center justify-center gap-5 absolute bg-black h-[79%] w-[296px] mx-10 my-10 bg-opacity-70 opacity-0 transition duration-700 ease-in-out rounded-xl hover:opacity-100">
+                            <div className="flex flex-col rounded-full items-center justify-center gap-5 absolute bg-black h-[79%] w-[296px] mx-10 my-10 bg-opacity-70 opacity-0 transition duration-700 ease-in-out hover:opacity-100">
                                 <h2 className="card-title">Benjamin Becker</h2>
                                 <p>Javascript Instructor</p>
                                 <div className="flex gap-10 text-2xl">
@@ -38,11 +38,11 @@ const InstructorCarousel = () => {
                         </div>
                     </motion.div>
                     <motion.div className='item'>
-                        <div className="card w-96 border-4 border-[#2a9d8f] text-white shadow-xl relative">
+                        <div className="card w-96 rounded-full border-4 border-[#2a9d8f] text-white  relative">
                             <figure className="px-10 py-10">
-                                <img src={img2} alt="Shoes" className="rounded-xl pointer-events-none" />
+                                <img src={img2} alt="Shoes" className="rounded-full pointer-events-none" />
                             </figure>
-                            <div className="flex flex-col items-center justify-center gap-5 absolute bg-black h-[79%] w-[296px] mx-10 my-10 bg-opacity-70 opacity-0 transition duration-700 ease-in-out rounded-xl hover:opacity-100">
+                            <div className="flex flex-col items-center justify-center gap-5 absolute bg-black h-[79%] w-[296px] mx-10 my-10 bg-opacity-70 opacity-0 transition duration-700 ease-in-out rounded-full hover:opacity-100">
                                 <h2 className="card-title">Tanya Sullivan</h2>
                                 <p>Python Instructor</p>
                                 <div className="flex gap-10 text-2xl">
@@ -54,11 +54,11 @@ const InstructorCarousel = () => {
                         </div>
                     </motion.div>
                     <motion.div className='item'>
-                        <div className="card w-96 border-4 border-[#2a9d8f] text-white shadow-xl relative">
+                        <div className="card w-96 rounded-full border-4 border-[#2a9d8f] text-white  relative">
                             <figure className="px-10 py-10">
-                                <img src={img3} alt="Shoes" className="rounded-xl pointer-events-none" />
+                                <img src={img3} alt="Shoes" className="rounded-full pointer-events-none" />
                             </figure>
-                            <div className="flex flex-col items-center justify-center gap-5 absolute bg-black h-[79%] w-[296px] mx-10 my-10 bg-opacity-70 opacity-0 transition duration-700 ease-in-out rounded-xl hover:opacity-100">
+                            <div className="flex flex-col items-center justify-center gap-5 absolute bg-black h-[79%] w-[296px] mx-10 my-10 bg-opacity-70 opacity-0 transition duration-700 ease-in-out rounded-full hover:opacity-100">
                                 <h2 className="card-title">Bradford Lane</h2>
                                 <p>Java Instructor</p>
                                 <div className="flex gap-10 text-2xl">
@@ -70,11 +70,11 @@ const InstructorCarousel = () => {
                         </div>
                     </motion.div>
                     <motion.div className='item'>
-                        <div className="card w-96 border-4 border-[#2a9d8f] text-white shadow-xl relative">
+                        <div className="card w-96 border-4 rounded-full border-[#2a9d8f] text-white  relative">
                             <figure className="px-10 py-10">
-                                <img src={img4} alt="Shoes" className="rounded-xl pointer-events-none" />
+                                <img src={img4} alt="Shoes" className="rounded-full pointer-events-none" />
                             </figure>
-                            <div className="flex flex-col items-center justify-center gap-5 absolute bg-black h-[79%] w-[296px] mx-10 my-10 bg-opacity-70 opacity-0 transition duration-700 ease-in-out rounded-xl hover:opacity-100">
+                            <div className="flex flex-col items-center justify-center gap-5 absolute bg-black h-[79%] w-[296px] mx-10 my-10 bg-opacity-70 opacity-0 transition duration-700 ease-in-out rounded-full hover:opacity-100">
                                 <h2 className="card-title">Neal Alvarado</h2>
                                 <p>C# Instructor</p>
                                 <div className="flex gap-10 text-2xl">
@@ -86,11 +86,11 @@ const InstructorCarousel = () => {
                         </div>
                     </motion.div>
                     <motion.div className='item'>
-                        <div className="card w-96 border-4 border-[#2a9d8f] text-white shadow-xl relative">
+                        <div className="card w-96 border-4 rounded-full border-[#2a9d8f] text-white  relative">
                             <figure className="px-10 py-10">
-                                <img src={img5} alt="Shoes" className="rounded-xl pointer-events-none" />
+                                <img src={img5} alt="Shoes" className="rounded-full pointer-events-none" />
                             </figure>
-                            <div className="flex flex-col items-center justify-center gap-5 absolute bg-black h-[79%] w-[296px] mx-10 my-10 bg-opacity-70 opacity-0 transition duration-300 ease-in-out rounded-xl hover:opacity-100">
+                            <div className="flex flex-col items-center justify-center gap-5 absolute bg-black h-[79%] w-[296px] mx-10 my-10 bg-opacity-70 opacity-0 transition duration-300 ease-in-out rounded-full hover:opacity-100">
                                 <h2 className="card-title">Franklin Gregory</h2>
                                 <p>PHP Instructor</p>
                                 <div className="flex gap-10 text-2xl">
@@ -102,11 +102,11 @@ const InstructorCarousel = () => {
                         </div>
                     </motion.div>
                     <motion.div className='item'>
-                        <div className="card w-96 border-4 border-[#2a9d8f] text-white shadow-xl relative">
+                        <div className="card w-96 border-4 rounded-full border-[#2a9d8f] text-white  relative">
                             <figure className="px-10 py-10">
-                                <img src={img6} alt="Shoes" className="rounded-xl pointer-events-none" />
+                                <img src={img6} alt="Shoes" className="rounded-full pointer-events-none" />
                             </figure>
-                            <div className="flex flex-col items-center justify-center gap-5 absolute bg-black h-[79%] w-[296px] mx-10 my-10 bg-opacity-70 opacity-0 transition duration-300 ease-in-out rounded-xl hover:opacity-100">
+                            <div className="flex flex-col items-center justify-center gap-5 absolute bg-black h-[79%] w-[296px] mx-10 my-10 bg-opacity-70 opacity-0 transition duration-300 ease-in-out rounded-full hover:opacity-100">
                                 <h2 className="card-title">Adam Clayton</h2>
                                 <p>Kotlin Instructor</p>
                                 <div className="flex gap-10 text-2xl">
