@@ -10,7 +10,6 @@ Happy learning is a website for online course of different programming languages
 <li>Mobile And Desktop Responsive.</li>
 <li>Download Or print option for course details.</li>
 <li>Easy to find questions answer from faq section</li>
-<li>Light and Dark Themes</li>
 </ul>
 
 # Used technologies
