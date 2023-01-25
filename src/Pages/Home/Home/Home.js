@@ -5,6 +5,7 @@ import SecondSection from './SecondSection/SecondSection';
 import InstructorCarousel from './Instructors/Carousel/InstructorCarousel';
 import Contact from './Contact/Contact';
 import ThirdSection from './ThirdSection/ThirdSection';
+import Feedback from './Feedback/Feedback';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <TopSection></TopSection>
             <SecondSection></SecondSection>
             <ThirdSection></ThirdSection>
+            <Feedback></Feedback>
             <InstructorCarousel></InstructorCarousel>
             <Contact></Contact>
         </div>

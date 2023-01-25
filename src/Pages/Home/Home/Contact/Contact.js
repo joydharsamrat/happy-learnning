@@ -68,7 +68,7 @@ const Contact = () => {
                         <textarea name="message" className="textarea w-full h-full  " placeholder="Your Message" required></textarea>
                     </div>
                 </div>
-                <input className='btn bg-white w-1/2 lg:w-1/4 text-[#2a9d8f] hover:bg-[#18524b] hover:text-white' type="submit" value={loading ? 'Sending...' : 'Send Message'} />
+                <input className='btn border-0 bg-white w-1/2 lg:w-1/4 text-[#2a9d8f] hover:bg-[#18524b] hover:text-white' type="submit" value={loading ? 'Sending...' : 'Send Message'} />
             </form>
 
         </div>
