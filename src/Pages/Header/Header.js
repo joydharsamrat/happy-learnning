@@ -53,7 +53,7 @@ const Header = () => {
                                         <FaUserAlt></FaUserAlt>
                                 }
                             </>
-                            <button onClick={handelLogOut} className="btn btn-outline ml-5">Logout</button>
+                            <button onClick={handelLogOut} className="btn btn-outline hover:bg-[#18524b] hover:text-white ml-5">Logout</button>
                         </>
 
                         :

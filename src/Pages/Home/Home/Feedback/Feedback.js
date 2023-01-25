@@ -14,7 +14,19 @@ const Feedback = () => {
                         disableOnInteraction: false,
                     }}
                     spaceBetween={50}
-                    slidesPerView={3}
+                    breakpoints={
+                        {
+                            0: {
+                                slidesPerView: 1
+                            },
+                            900: {
+                                slidesPerView: 2
+                            },
+                            1250: {
+                                slidesPerView: 3
+                            },
+                        }
+                    }
                     loop={true}
                     modules={[Autoplay]}
                 >
@@ -77,7 +89,19 @@ const Feedback = () => {
                     }}
                     dir={'rtl'}
                     spaceBetween={50}
-                    slidesPerView={3}
+                    breakpoints={
+                        {
+                            0: {
+                                slidesPerView: 1
+                            },
+                            900: {
+                                slidesPerView: 2
+                            },
+                            1250: {
+                                slidesPerView: 3
+                            },
+                        }
+                    }
                     loop={true}
                     modules={[Autoplay]}
                 >
