@@ -7,7 +7,7 @@ const Feedback = () => {
     return (
         <div className='pointer-events-none my-20'>
             <h1 className='text-center section-title text-3xl border bg-[#2a9d8f] rounded text-white font-bold p-2 lg:w-96 mb-12 mx-auto'>Successful Students</h1>
-            <div >
+            <div data-aos='fade-up' data-aos-duration='1500'>
                 <Swiper
                     autoplay={{
                         delay: 2500,
@@ -81,7 +81,7 @@ const Feedback = () => {
 
                 </Swiper>
             </div>
-            <div className='mt-5'>
+            <div data-aos='fade-down' data-aos-duration='1500' className='mt-5'>
                 <Swiper
                     autoplay={{
                         delay: 2500,
