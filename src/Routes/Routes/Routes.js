@@ -44,24 +44,24 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/courses',
-                loader: () => fetch('https://happy-learning-server-joydharsamrat.vercel.app/categories'),
+                loader: () => fetch('https://happy-learning-server-omega.vercel.app/categories'),
                 element: <Courses></Courses>,
 
                 children: [
                     {
                         path: '/courses',
-                        loader: () => fetch('https://happy-learning-server-joydharsamrat.vercel.app/categories'),
+                        loader: () => fetch('https://happy-learning-server-omega.vercel.app/categories'),
                         element: <CourseCategories></CourseCategories>
                     },
 
                     {
                         path: '/courses/courseDetails/:id',
-                        loader: ({ params }) => fetch(`https://happy-learning-server-joydharsamrat.vercel.app/details/${params.id}`),
+                        loader: ({ params }) => fetch(`https://happy-learning-server-omega.vercel.app/details/${params.id}`),
                         element: <CourseSubjectsDetails></CourseSubjectsDetails>
                     },
                     {
                         path: '/courses/courseDetails/checkout/:id',
-                        loader: ({ params }) => fetch(`https://happy-learning-server-joydharsamrat.vercel.app/details/${params.id}`),
+                        loader: ({ params }) => fetch(`https://happy-learning-server-omega.vercel.app/details/${params.id}`),
                         element: <PrivateRoutes><Checkout></Checkout></PrivateRoutes>
                     }
 
